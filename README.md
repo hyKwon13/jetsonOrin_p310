@@ -1,4 +1,6 @@
 ```bash
+
+# python3.10 설치
 sudo apt update
 sudo apt install -y build-essential libssl-dev zlib1g-dev \
 libncurses5-dev libncursesw5-dev libreadline-dev libsqlite3-dev \
@@ -20,4 +22,13 @@ python3.10 -m pip install --upgrade pip
 python3.10 -m pip install numpy
 
 python3.10 -m pip install opencv-python
+
+
+# mysql 설치
+sudo apt install mysql-server
+
+# pytorch - jetson 설치
+https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048
+에서 whl 파일 받아서 설치
+
 ```
