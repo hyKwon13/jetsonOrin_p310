@@ -24,6 +24,17 @@ python3.10 -m pip install --upgrade pip
 python3.10 -m pip install --user "numpy<2"
 python3.10 -m pip install opencv-python
 sudo apt install nvidia-opencv-dev nvidia-opencv
+find /usr -name "cv2*.so" 이렇게해서 나온
+/usr/lib/python3.10/dist-packages/cv2/python-3.10/cv2.cpython-310-aarch64-linux-gnu.so
+이 경로의 /usr/lib/python3.10/dist-packages 이 부분을 넣어서 환경변수 설정
+export PYTHONPATH=/usr/lib/python3.10/dist-packages/:$PYTHONPATH
+ 
+.bashrc에 아래 내용 추가
+echo 'export PYTHONPATH=/usr/lib/python3.10/dist-packages:$PYTHONPATH' >> ~/.bashrc
+source ~/.bashrc
+
+
+
 
 # 각종 패키지 설치
 python3.10 -m pip install --user [패키지이름]
