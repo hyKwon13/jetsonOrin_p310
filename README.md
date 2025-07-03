@@ -33,7 +33,9 @@ sudo apt install mysql-server
 
 # pytorch - jetson 설치
 https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048
-에서 whl 파일 받아서 설치
+에서 whl 파일 받아서 설치. python3.10, cuda12.4로 설치
+pip install torch-2.3.0-cp310-cp310-linux_aarch64.whl
+pip install torchvision-0.18.0a0+6043bc2-cp310-cp310-linux_aarch64.whl
 
 
 # (옵션) jtop 설치
