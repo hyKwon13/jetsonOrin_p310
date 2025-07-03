@@ -37,6 +37,8 @@ https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048
 pip install torch-2.3.0-cp310-cp310-linux_aarch64.whl
 pip install torchvision-0.18.0a0+6043bc2-cp310-cp310-linux_aarch64.whl
 
+# GPIO 설치
+python3.10 -m pip install Jetson.GPIO
 
 # (옵션) jtop 설치
 sudo pip3 install -U jetson-stats
