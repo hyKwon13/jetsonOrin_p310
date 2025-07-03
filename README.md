@@ -31,6 +31,17 @@ python3.10 -m pip install --user [패키지이름]
 # mysql 설치
 sudo apt install mysql-server
 
+# mysql 진입
+sudo mysql
+
+# 비밀번호 설정
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'hynux1357';
+FLUSH PRIVILEGES;
+ 
+CREATE USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'hynux1357';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
 # pytorch - jetson 설치
 https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048
 에서 whl 파일 받아서 설치. python3.10, cuda12.4로 설치
