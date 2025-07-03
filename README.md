@@ -21,7 +21,7 @@ sudo apt install python3-pip
 python3.10 -m pip install --upgrade pip
 
 # numpy, opencv 설치
-python3.10 -m pip install numpy
+python3.10 -m pip install --user "numpy<2"
 python3.10 -m pip install opencv-python
 sudo apt install nvidia-opencv-dev nvidia-opencv
 
