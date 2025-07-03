@@ -42,6 +42,9 @@ CREATE USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'hynux1357';
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
+# 스키마 생성
+CREATE DATABASE hydb;
+
 # pytorch - jetson 설치
 https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048
 에서 whl 파일 받아서 설치. python3.10, cuda12.4로 설치
