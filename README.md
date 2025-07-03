@@ -54,6 +54,9 @@ pip install torchvision-0.18.0a0+6043bc2-cp310-cp310-linux_aarch64.whl
 # GPIO 설치
 python3.10 -m pip install Jetson.GPIO
 
+# V4L2 설치
+sudo apt install v4l-utils
+
 # (옵션) jtop, nano 설치
 sudo pip3 install -U jetson-stats
 sudo apt install nano
