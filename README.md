@@ -35,4 +35,7 @@ sudo apt install mysql-server
 https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048
 에서 whl 파일 받아서 설치
 
+
+# (옵션) jtop 설치
+sudo pip3 install -U jetson-stats
 ```
