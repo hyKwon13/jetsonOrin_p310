@@ -34,8 +34,6 @@ echo 'export PYTHONPATH=/usr/lib/python3.10/dist-packages:$PYTHONPATH' >> ~/.bas
 source ~/.bashrc
 
 
-
-
 # 각종 패키지 설치
 python3.10 -m pip install --user [패키지이름]
 
@@ -67,6 +65,20 @@ python3.10 -m pip install Jetson.GPIO
 
 # V4L2 설치
 sudo apt install v4l-utils
+
+# pycuda 설치
+sudo apt install -y build-essential python3.10-dev \
+                    libpython3.10-dev pkg-config git \
+                    nvidia-cuda-dev
+
+echo 'export PATH=/usr/local/cuda/bin:$PATH'           >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
+echo 'export CPATH=/usr/local/cuda/include:$CPATH'     >> ~/.bashrc
+source ~/.bashrc
+
+git clone https://github.com/inducer/pycuda.git
+cd pycuda
+python3.10 -m pip install --user .
 
 # (옵션) jtop, nano 설치
 sudo pip3 install -U jetson-stats
