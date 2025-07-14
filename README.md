@@ -65,7 +65,8 @@ python3.10 -m pip install Jetson.GPIO
 
 # GPIO 설정
  sudo /opt/nvidia/jetson-io/jetson-io.py -> Configure Jetson 40pin Header -> Configure header pins manuallly
-<img width="342" height="266" alt="image" src="https://github.com/user-attachments/assets/311c4970-3f3e-40a5-863c-20ea9474e447" />
+<img width="342" height="266" alt="캡처" src="https://github.com/user-attachments/assets/97b2c874-5673-42aa-b826-217b8bb14e52" />
+
 
 # V4L2 설치
 sudo apt install v4l-utils
