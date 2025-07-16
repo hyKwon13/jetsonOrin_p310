@@ -92,3 +92,54 @@ python3.10 -m pip install --user .
 sudo pip3 install -U jetson-stats
 sudo apt install nano
 ```
+
+
+# Vision Sensor Server systemd Service Setup
+
+## 1. 서비스 유닛 파일 만들기
+
+```bash
+sudo nano /etc/systemd/system/vision-server.service
+```
+
+아래 내용을 붙여넣어:
+
+```ini
+[Unit]
+Description=Vision Sensor Server
+After=network.target
+
+[Service]
+WorkingDirectory=/home/visionsensor/vision
+ExecStart=/usr/bin/python3.10 /home/visionsensor/vision/server.py
+Restart=always
+RestartSec=5
+User=visionsensor
+
+[Install]
+WantedBy=multi-user.target
+```
+
+> ⚠️ **주의**  
+> * `ExecStart` 경로는 `which python3.10` 명령으로 확인한 정확한 Python 실행 파일 위치로 변경하세요.  
+> * `User` 값은 서비스를 실행할 실제 사용자 계정(예: `visionsensor`)인지 확인하세요.
+
+## 2. 서비스 등록 및 자동 시작 설정
+
+```bash
+sudo systemctl daemon-reexec
+sudo systemctl daemon-reload
+sudo systemctl enable vision-server.service
+sudo systemctl start vision-server.service
+```
+
+## 3. 서비스 상태 확인 및 로그 보기
+
+```bash
+# 현재 상태 확인
+sudo systemctl status vision-server.service
+
+# 실시간 로그 출력
+journalctl -u vision-server.service -f
+```
+
