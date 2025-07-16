@@ -74,10 +74,10 @@ python3.10 -m pip install Jetson.GPIO
 # V4L2 설치
 sudo apt install v4l-utils
 
-# # pycuda 설치
+# # pycuda 설치 (우선 tensorrt 사용 안하므로 설치 X)
 # sudo apt install -y build-essential python3.10-dev \
-                    libpython3.10-dev pkg-config git \
-                    nvidia-cuda-dev
+#                    libpython3.10-dev pkg-config git \
+#                    nvidia-cuda-dev
 
 # echo 'export PATH=/usr/local/cuda/bin:$PATH'           >> ~/.bashrc
 # echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
