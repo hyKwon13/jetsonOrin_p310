@@ -102,7 +102,7 @@ sudo apt install nano
 sudo nano /etc/systemd/system/vision-server.service
 ```
 
-아래 내용을 붙여넣어:
+내용
 
 ```ini
 [Unit]
@@ -111,7 +111,7 @@ After=network.target
 
 [Service]
 WorkingDirectory=/home/visionsensor/vision
-ExecStart=/usr/bin/python3.10 /home/visionsensor/vision/server.py
+ExecStart=/usr/loacal/bin/python3.10 /home/visionsensor/vision/server.py
 Restart=always
 RestartSec=5
 User=visionsensor
@@ -120,9 +120,8 @@ User=visionsensor
 WantedBy=multi-user.target
 ```
 
-> ⚠️ **주의**  
-> * `ExecStart` 경로는 `which python3.10` 명령으로 확인한 정확한 Python 실행 파일 위치로 변경하세요.  
-> * `User` 값은 서비스를 실행할 실제 사용자 계정(예: `visionsensor`)인지 확인하세요.
+> * `ExecStart` 경로는 `which python3.10` 명령으로 확인한 정확한 Python 실행 파일 위치로 변경 
+> * `User` 값은 서비스를 실행할 실제 사용자 계정(예: `visionsensor`)인지 확인
 
 ## 2. 서비스 등록 및 자동 시작 설정
 
