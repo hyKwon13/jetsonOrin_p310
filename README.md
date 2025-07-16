@@ -84,9 +84,9 @@ sudo apt install v4l-utils
 # echo 'export CPATH=/usr/local/cuda/include:$CPATH'     >> ~/.bashrc
 # source ~/.bashrc
 
-git clone https://github.com/inducer/pycuda.git
-cd pycuda
-python3.10 -m pip install --user .
+# git clone https://github.com/inducer/pycuda.git
+# cd pycuda
+# python3.10 -m pip install --user .
 
 # (옵션) jtop, nano 설치
 sudo pip3 install -U jetson-stats
