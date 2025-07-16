@@ -74,15 +74,15 @@ python3.10 -m pip install Jetson.GPIO
 # V4L2 설치
 sudo apt install v4l-utils
 
-# pycuda 설치
-sudo apt install -y build-essential python3.10-dev \
+# # pycuda 설치
+# sudo apt install -y build-essential python3.10-dev \
                     libpython3.10-dev pkg-config git \
                     nvidia-cuda-dev
 
-echo 'export PATH=/usr/local/cuda/bin:$PATH'           >> ~/.bashrc
-echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
-echo 'export CPATH=/usr/local/cuda/include:$CPATH'     >> ~/.bashrc
-source ~/.bashrc
+# echo 'export PATH=/usr/local/cuda/bin:$PATH'           >> ~/.bashrc
+# echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
+# echo 'export CPATH=/usr/local/cuda/include:$CPATH'     >> ~/.bashrc
+# source ~/.bashrc
 
 git clone https://github.com/inducer/pycuda.git
 cd pycuda
