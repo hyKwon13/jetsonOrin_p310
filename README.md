@@ -68,7 +68,7 @@ python3.10 -m pip install Jetson.GPIO
 ```
 
 
-![capture1](https://github.com/hyKwon13/jetsonOrin_p310/raw/main/capture1.PNG)
+![capture1](https://github.com/hyKwon13/jetsonOrin_p310/raw/main/캡처.PNG)
 
 ```bash
 # V4L2 설치
