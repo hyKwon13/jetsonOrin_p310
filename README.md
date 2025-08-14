@@ -61,7 +61,14 @@ pip install torch-2.3.0-cp310-cp310-linux_aarch64.whl
 pip install torchvision-0.18.0a0+6043bc2-cp310-cp310-linux_aarch64.whl
 
 # GPIO 설치
-python3.10 -m pip install Jetson.GPIO
+# 기존 시스템 패키지 제거(충돌 방지)
+sudo apt-get remove -y python3-jetson-gpio
+
+# 소스 설치
+sudo apt-get install -y git python3.10-dev python3.10-distutils
+git clone https://github.com/NVIDIA/jetson-gpio.git
+cd jetson-gpio
+sudo python3.10 setup.py install
 
 # GPIO 설정
  sudo /opt/nvidia/jetson-io/jetson-io.py -> Configure Jetson 40pin Header -> Configure header pins manuallly
